@@ -1,0 +1,69 @@
+
+/* Existing CSS remains intact above this point */
+
+.about-me,
+.projects,
+.testimonials,
+.cta,
+.summary {
+  margin-bottom: 2.5rem;
+}
+
+.about-me p,
+.projects p,
+.testimonials blockquote,
+.cta p,
+.summary p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+.project {
+  background: #ffffff;
+  border-left: 4px solid #1e40af;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.project h3 {
+  margin-bottom: 0.4rem;
+  color: #1e40af;
+}
+.project a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.testimonials blockquote {
+  background: #fef9c3;
+  padding: 1rem;
+  border-left: 6px solid #facc15;
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  border-radius: 5px;
+}
+
+.cta {
+  background: #e0f2fe;
+  border-left: 6px solid #0284c7;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 6px;
+}
+.cta-button {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #0284c7;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #0369a1;
+}
