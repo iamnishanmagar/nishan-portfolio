@@ -1,34 +1,83 @@
+// ===========================
+// Typing Animation
+// ===========================
+const typingEl = document.querySelector('.typing');
+const words = ['Frontend Developer', 'Flutter Developer', 'UI/UX Enthusiast'];
+let i = 0, j = 0, isDeleting = false;
+
+function typeEffect() {
+    const currentWord = words[i];
+
+    if (!isDeleting) {
+        typingEl.textContent = currentWord.substring(0, j++);
+    } else {
+        typingEl.textContent = currentWord.substring(0, j--);
+    }
+
+    if (!isDeleting && j === currentWord.length + 1) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000);
+        return;
+    }
+
+    if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+    }
+
+    setTimeout(typeEffect, isDeleting ? 60 : 120);
+}
+
+if (typingEl) {
+    typeEffect();
+}
+
+// ===========================
+// Card Load Animation
+// ===========================
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
+    const cards = document.querySelectorAll('.card');
+
+    function animateCardsOnLoad() {
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('animate');
+            }, index * 200);
+        });
+    }
+
+    animateCardsOnLoad();
+});
+
+// ===========================
+// Scroll Reveal Animation
+// ===========================
+const revealElements = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            el.classList.add('active');
+        }
     });
-  
-    // Animate skill bars
-    document.querySelectorAll('.skill-bar').forEach(bar => {
-      const level = bar.dataset.level;
-      bar.style.setProperty('--bar-fill', `${level}%`);
-      bar.style.setProperty('width', `${level}%`);
-      setTimeout(() => {
-        bar.style.setProperty('width', `${level}%`);
-        bar.style.setProperty('--bar-fill', `${level}%`);
-        bar.style.setProperty('transition', 'width 1s ease-in-out');
-      }, 300);
-    });
-  
-    // Contact form submit
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Message sent! (form handling not connected)');
-      form.reset();
-    });
-  
-    // Download as PDF
-    const downloadBtn = document.getElementById('download-btn');
-    downloadBtn.addEventListener('click', () => {
-      alert('PDF download coming soon. Use Print > Save as PDF in meantime.');
-    });
-  });
-  
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+// ===========================
+// Scroll Indicator Bar
+// ===========================
+const scrollBar = document.querySelector('.scroll-indicator');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    if (scrollBar) {
+        scrollBar.style.width = scrollPercent + '%';
+    }
+});
