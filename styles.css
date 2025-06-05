@@ -5,9 +5,12 @@
   --accent-color: #4e54c8;
   --accent-alt: #8f94fb;
   --card-bg: rgba(255, 255, 255, 0.5);
+  --button-bg: linear-gradient(to right, #4e54c8, #8f94fb);
+  --button-hover: linear-gradient(to right, #8f94fb, #4e54c8);
   --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
 }
 
+/* Body Styling */
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -67,12 +70,7 @@ body {
   }
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-}
-
+/* Navbar Styling */
 .navbar {
   position: fixed;
   top: 0;
@@ -122,6 +120,7 @@ body {
   color: var(--accent-alt);
 }
 
+/* Hero Section Styling */
 .hero-section {
   min-height: 80vh;
   display: flex;
@@ -184,7 +183,7 @@ body {
 .btn-download {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: linear-gradient(to right, var(--accent-color), var(--accent-alt));
+  background: var(--button-bg);
   color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
@@ -198,6 +197,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Section Styling */
 .section {
   padding: 4rem 1rem;
   text-align: center;
@@ -216,6 +216,217 @@ body {
   margin-bottom: 2rem;
   color: var(--accent-color);
 }
+/* Skills Section Styling */
+/* Skills Section Styling */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 10px;
+    overflow: hidden;
+}
+/* Section for Projects */
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  margin: 2rem auto;
+  border: 1px solid var(--glass-border);
+  max-width: 90%;
+}
+
+/* Section Title */
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+/* Project Card */
+/* Project Card */
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--glass-border); /* Adds a bottom line separator */
+  padding-bottom: 2rem; /* Adds space for the line */
+}
+
+/* Left Section: Image */
+.project-left {
+  flex: 1 1 45%;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  max-height: 300px;
+}
+
+/* Right Section: Description */
+.project-right {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left; /* Ensures the description aligns to the left */
+}
+
+/* Heading for Project */
+.project-right h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+/* Paragraph for Project */
+.project-right p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Chips for Tech Stack */
+.chips {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chip {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Button */
+.btn-link {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: var(--button-bg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-link:hover {
+  transform: scale(1.05);
+}
+
+/* Reverse the layout for alternate projects */
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Adjust layout for small screens */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-left, .project-right {
+    max-width: 100%;
+  }
+
+  .project-left img {
+    max-width: 80%;
+  }
+}
+
+
+
+
+/* Button */
+.btn-link {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: var(--button-bg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-link:hover {
+  transform: scale(1.05);
+}
+
+/* Reverse the layout for every alternate project */
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 500px) {
+  .project-card {
+    flex-direction: column; /* Stack image and description vertically */
+  }
+
+  .project-left {
+    max-width: 100%;
+  }
+
+  .project-right {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+
+.progress {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    transition: width 0.5s ease;
+}
+
+.skill h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+
+
 
 .cards {
   display: grid;
@@ -312,14 +523,15 @@ body {
 
 @keyframes cardFadeIn {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
 
 .btn-link {
   display: inline-block;
@@ -393,7 +605,7 @@ body {
 
 .contact-form button {
   padding: 0.75rem;
-  background: linear-gradient(to right, var(--accent-color), var(--accent-alt));
+  background: var(--button-bg);
   color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
@@ -479,4 +691,85 @@ body {
   .social-links a i {
     font-size: 1rem;
   }
+
+  
 }
+
+/* Footer Styling */
+footer {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin: 0;
+}
+/* Achievements Section Styling */
+#achievements {
+  padding: 4rem 1rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  margin: 2rem auto;
+  border: 1px solid var(--glass-border);
+  max-width: 90%;
+  text-align: center;
+}
+
+.achievement-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.achievement-item {
+  background: var(--card-bg);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+  width: 100%;
+}
+
+.achievement-item i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.achievement-item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.achievement-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+.achievement-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.achievement-item:hover i {
+  color: var(--accent-alt);
+}
+

@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nishan | Portfolio</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <!-- Font Awesome CDN for social media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
   <div class="scroll-indicator"></div>
   <div class="animated-shape one"></div>
   <div class="animated-shape two"></div>
 
+  <!-- Header Section -->
   <header id="home">
     <nav class="navbar">
       <div class="container">
@@ -38,84 +41,173 @@
     </div>
   </header>
 
+  <!-- About Section -->
   <section id="about" class="section">
     <h2 class="section-title">About Me</h2>
     <div class="cards reveal">
       <div class="card" data-index="0">
-        <p>I'm Nishan Kumar Magar, a highly motivated and creative Frontend & Flutter Developer. I specialize in building scalable web and mobile applications with modern UI/UX.</p>
+        <p>I'm Nishan Kumar Magar, a highly motivated and creative Frontend & Flutter Developer. I specialize in building scalable web and mobile applications with modern UI/UX. With over 5 years of experience, I focus on designing clean, efficient, and responsive user interfaces, along with delivering high-quality code using modern JavaScript, React, and Flutter frameworks.</p>
+        <p>My expertise includes building mobile apps, progressive web apps (PWAs), and web applications that are optimized for both performance and user experience. I thrive in a collaborative environment and love exploring the latest trends in technology to enhance the development process.</p>
       </div>
     </div>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <h3>Frontend Development</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%;"></div>
+        </div>
+        <p>Expert in HTML5, CSS3, JavaScript, and modern JavaScript frameworks like React.js and Angular. Skilled in developing highly interactive and responsive user interfaces with rich animations and smooth transitions.</p>
+      </div>
+      <div class="skill">
+        <h3>Flutter Development</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+        <p>Proficient in building cross-platform mobile applications using Flutter and Dart. I focus on performance optimization and delivering a seamless mobile experience across iOS and Android platforms.</p>
+      </div>
+      <div class="skill">
+        <h3>UI/UX Design</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+        <p>Experienced in designing intuitive user interfaces and creating smooth user experiences. I follow a user-centered design approach to ensure that the applications are easy to use, engaging, and meet the needs of users.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievement-container">
+      <div class="achievement-item">
+        <i class="fas fa-trophy"></i>
+        <h3>Winner of the XYZ Coding Challenge 2023</h3>
+        <p>Awarded for outstanding performance in a nationwide coding competition, demonstrating advanced problem-solving skills and innovation in algorithm design.</p>
+      </div>
+      <div class="achievement-item">
+        <i class="fab fa-google"></i>
+        <h3>Certified Google Flutter Developer</h3>
+        <p>Achieved certification for excellence in building scalable mobile apps with Flutter, specializing in performance and efficient use of resources.</p>
+      </div>
+      <div class="achievement-item">
+        <i class="fas fa-code"></i>
+        <h3>Completed 500+ Projects on GitHub</h3>
+        <p>Contributed to numerous open-source projects and maintained a highly active GitHub profile, with contributions focused on performance optimization and front-end development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Collaboration Section -->
   <section id="team" class="section">
     <h2 class="section-title">Team Collaboration</h2>
     <div class="cards reveal">
       <div class="card" data-index="1">
-        <p>I thrive in Agile teams, working closely with designers and product managers to build end-to-end solutions.</p>
+        <p>I thrive in Agile teams, working closely with designers, product managers, and developers to build end-to-end solutions. I embrace collaboration and communication to ensure successful project delivery.</p>
+        <p>Working with cross-functional teams, I have helped develop several products from the ground up, ensuring all stakeholders' expectations are met while maintaining a strong focus on the end-user experience.</p>
       </div>
     </div>
   </section>
 
+  <!-- Featured Projects Section -->
   <section id="projects" class="section">
     <h2 class="section-title">Featured Projects</h2>
-    <div class="cards reveal">
-      <div class="card" data-index="2">
-        <h3>Portfolio Website</h3>
-        <p>Responsive personal website with animations and contact form.</p>
-        <a href="https://nishan-portfolio.vercel.app" class="btn-link" target="_blank">Live Preview</a>
+    <div class="project-card">
+      <div class="project-left">
+        <img src="images/image3.png" alt="Portfolio Website">
       </div>
-      <div class="card" data-index="3">
+      <div class="project-right">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal website with animations, a contact form, and live previews of projects. Built using React and Tailwind CSS for a modern and clean look.</p>
+        <div class="chips">
+          <span class="chip">React</span>
+          <span class="chip">Tailwind CSS</span>
+          <span class="chip">JavaScript</span>
+        </div>
+        <a href="https://nishan-portfolio-st2m.vercel.app/#blog" class="btn-link" target="_blank">Live Preview</a>
+      </div>
+    </div>
+    <div class="project-card reverse">
+      <div class="project-left">
+        <img src="images/pos.png" alt="POS System">
+      </div>
+      <div class="project-right">
         <h3>POS System</h3>
-        <p>Flutter-based POS app with Firebase backend.</p>
+        <p>Flutter-based POS app with Firebase backend, designed for seamless retail transactions. The app provides real-time order and stock management.</p>
+        <div class="chips">
+          <span class="chip">Flutter</span>
+          <span class="chip">Firebase</span>
+          <span class="chip">Dart</span>
+        </div>
         <a href="#" class="btn-link">Demo Coming Soon</a>
       </div>
     </div>
   </section>
 
+  <!-- Services Section -->
   <section id="services" class="section">
     <h2 class="section-title">What I Offer</h2>
     <div class="cards reveal">
       <div class="card" data-index="4">
         <h3>Flutter Apps</h3>
-        <p>Cross-platform apps with Firebase + API integrations.</p>
+        <p>Cross-platform mobile applications with Firebase and API integrations. I create apps that work seamlessly on both iOS and Android platforms.</p>
       </div>
       <div class="card" data-index="5">
         <h3>Frontend Dev</h3>
-        <p>Modern UI with React, Tailwind CSS, and animation.</p>
+        <p>Developing modern UIs with React, Tailwind CSS, and animation to provide rich user experiences.</p>
       </div>
       <div class="card" data-index="6">
         <h3>UI/UX Consulting</h3>
-        <p>Design-driven web and app interfaces.</p>
+        <p>Design-driven web and mobile interfaces. I offer UI/UX consulting to improve the visual appeal and usability of your application.</p>
       </div>
     </div>
   </section>
 
+  <!-- Blog Section -->
   <section id="blog" class="section">
     <h2 class="section-title">Blog Highlights</h2>
     <div class="cards reveal">
       <div class="card" data-index="7">
-        <h3>Why Flutter Rocks ?</h3>
-        <p>Single codebase, hot reload, and rich widgets.</p>
+        <h3>Why Flutter Rocks?</h3>
+        <p>Explore why Flutter is an outstanding framework for building cross-platform mobile apps with a single codebase.</p>
         <a href="#" class="btn-link">Read Article</a>
       </div>
       <div class="card" data-index="8">
         <h3>Responsive CSS Tips</h3>
-        <p>Mobile-first layouts and scaling tricks.</p>
+        <p>Tips and techniques for building mobile-first layouts that are adaptive to various screen sizes and resolutions.</p>
         <a href="#" class="btn-link">Read Article</a>
       </div>
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <h2 class="section-title">What People Are Saying</h2>
+    <div class="testimonial-item">
+      <p>"Nishan's work on our project was exceptional. His ability to combine design and functionality is amazing!"</p>
+      <p><strong>- John Doe, CEO at Company</strong></p>
+    </div>
+    <div class="testimonial-item">
+      <p>"As a teammate, Nishan is an absolute pleasure to work with. He has a great problem-solving approach."</p>
+      <p><strong>- Jane Smith, Product Manager at Company</strong></p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="section">
     <h2 class="section-title">Let's Connect</h2>
     <div class="social-links">
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/nishan-kumar-magar-90823119b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <a href="https://github.com/iamnishanmagar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
         <i class="fab fa-twitter"></i>
       </a>
       <a href="mailto:your.email@example.com" aria-label="Email">
@@ -129,5 +221,13 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Nishan. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
